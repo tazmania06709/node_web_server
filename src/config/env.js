@@ -1,7 +1,9 @@
-import dotenv from 'dotenv';
+// require('dotenv').config();
+import env from 'dotenv';
+// const {get} = require('env-var');
 import  envvar from 'env-var';
 
-dotenv.config();
+env.config();
 
 
 export const envs = {
