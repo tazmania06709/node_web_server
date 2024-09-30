@@ -1,15 +1,7 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import path from 'path';
-import { dirname } from 'path';
+const express = require('express')
+const path = require('path')
 
-// Get the filename
-const __filename = fileURLToPath(import.meta.url);
-
-// Get the directory name
-const __dirname = dirname(__filename);
-
-export const startServer = (options) => {
+const startServer = (options) => {
     const { port, public_path = 'public' } = options;
 
     const app = express();
@@ -29,3 +21,7 @@ export const startServer = (options) => {
         console.log(`Server running on port ${port}`);
     });
 };
+
+module.exports = {
+    startServer
+}
