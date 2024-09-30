@@ -1,15 +1,8 @@
 // const express = require('express');
 import express from 'express';
-import { fileURLToPath } from 'url';
 // const path =require('path');
 import path from 'path';
-import { dirname } from 'path';
 
-// Get the filename
-const __filename = fileURLToPath(import.meta.url);
-
-// Get the directory name
-const __dirname = dirname(__filename);
 
 export const startServer = (options) => {
     const { port, public_path = 'public' } = options;
